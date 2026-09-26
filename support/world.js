@@ -6,6 +6,7 @@ class CustomWorld {
         this.context = null;
         this.page = null;
         this.poManager = null;
+        this.loginErrorMessage = null;
     }
 }
 

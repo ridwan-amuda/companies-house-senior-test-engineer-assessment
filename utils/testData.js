@@ -5,7 +5,7 @@ const testData = {
     },
 
     invalidUser: {
-        username: 'invalid_user_qa_2026',
+        username: 'jane_doe_demo',
         password: 'WrongPassword123!'
     }
 };

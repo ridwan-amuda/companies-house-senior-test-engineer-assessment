@@ -10,3 +10,9 @@ Feature: User authentication
     Given the user is on the DemoBlaze homepage
     When the user logs in with valid credentials
     Then the user should be successfully logged in
+
+    @negative @login
+Scenario: Login is rejected with invalid credentials
+  Given the user is on the DemoBlaze homepage
+  When the user attempts to login with invalid credentials
+  Then the login attempt should be rejected
