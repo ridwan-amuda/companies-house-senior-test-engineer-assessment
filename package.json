@@ -1,0 +1,19 @@
+{
+  "name": "companies-house-senior-test-engineer-assessment",
+  "version": "1.0.0",
+  "description": "Technical assessment demonstrating functional test planning and UI test automation using Playwright, JavaScript and Cucumber BDD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "HEADLESS=false cucumber-js",
+    "test:smoke": "cucumber-js --tags '@smoke'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "playwright": "^1.63.0"
+  }
+}
