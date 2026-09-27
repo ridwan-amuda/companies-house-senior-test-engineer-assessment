@@ -4,9 +4,8 @@
   "description": "Technical assessment demonstrating functional test planning and UI test automation using Playwright, JavaScript and Cucumber BDD.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js",
-    "test:headed": "HEADLESS=false cucumber-js",
-    "test:smoke": "cucumber-js --tags '@smoke'"
+    "test": "node --env-file=.env ./node_modules/@cucumber/cucumber/bin/cucumber-js",
+    "test:smoke": "node --env-file=.env ./node_modules/@cucumber/cucumber/bin/cucumber-js --tags \"@smoke\""
   },
   "keywords": [],
   "author": "",
@@ -15,5 +14,8 @@
     "@cucumber/cucumber": "^13.2.1",
     "@playwright/test": "^1.63.0",
     "playwright": "^1.63.0"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4"
   }
 }
