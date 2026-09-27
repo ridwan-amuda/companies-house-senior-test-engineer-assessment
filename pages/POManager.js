@@ -1,6 +1,7 @@
 const { HomePage } = require('./HomePage');
 const { LoginPage } = require('./LoginPage');
 const { ProductPage } = require('./ProductPage');
+const { CartPage } = require('./CartPage');
 
 class POManager {
     constructor(page) {
@@ -9,6 +10,7 @@ class POManager {
         this.homePage = new HomePage(page);
         this.loginPage = new LoginPage(page);
         this.productPage = new ProductPage(page);
+        this.cartPage = new CartPage(page);
         
     }
 
@@ -23,6 +25,11 @@ class POManager {
      getProductPage() {
         return this.productPage;
     }
+
+    getCartPage() {
+    return this.cartPage;
+}
+
 }
 
 module.exports = { POManager };

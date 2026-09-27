@@ -7,6 +7,8 @@ class CustomWorld {
         this.page = null;
         this.poManager = null;
         this.loginErrorMessage = null;
+        this.selectedProductName = null;
+        this.selectedProductPrice = null;
     }
 }
 
