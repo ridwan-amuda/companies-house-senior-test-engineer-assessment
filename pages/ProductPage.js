@@ -39,14 +39,18 @@ class ProductPage {
     }
 
     async addProductToCart() {
-        const dialogPromise = this.page.waitForEvent('dialog');
+    await this.addToCartButton.waitFor({
+        state: 'visible'
+    });
 
-        await this.addToCartButton.click();
+    const dialogPromise = this.page.waitForEvent('dialog');
 
-        const dialog = await dialogPromise;
+    await this.addToCartButton.click();
 
-        await dialog.accept();
-    }
+    const dialog = await dialogPromise;
+
+    await dialog.accept();
+}
 }
 
 module.exports = { ProductPage };

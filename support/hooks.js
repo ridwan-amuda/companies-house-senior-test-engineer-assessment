@@ -2,11 +2,14 @@ const {
     Before,
     After,
     BeforeAll,
-    AfterAll
+    AfterAll,
+    setDefaultTimeout
 } = require('@cucumber/cucumber');
 
 const { chromium } = require('playwright');
 const { POManager } = require('../pages/POManager');
+
+setDefaultTimeout(30 * 1000);
 
 let browser;
 

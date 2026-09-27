@@ -3,6 +3,10 @@ class CartPage {
         this.page = page;
 
         this.cartRows = page.locator('#tbodyid tr');
+
+         this.placeOrderButton = page.getByRole('button', {
+            name: 'Place Order'
+        });
     }
 
     async getProductRow(productName) {
@@ -21,6 +25,10 @@ class CartPage {
         const row = await this.getProductRow(productName);
 
         return (await row.locator('td').nth(2).textContent()).trim();
+    }
+
+    async proceedToCheckout() {
+        await this.placeOrderButton.click();
     }
 }
 
